@@ -1,26 +1,158 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #0a0a0a;
+  --muted: #737373;
+  --accent: #e5a435;
+  --border: #e5e5e5;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+::selection {
+  background-color: #e5a435;
+  color: #0a0a0a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ─── CSS micro-interactions (GPU-accelerated, zero JS) ───── */
+
+/* Underline expand on hover */
+.hover-underline {
+  position: relative;
+}
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* Lift on hover (cards, items) */
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Subtle scale on tap for buttons */
+.tap-scale {
+  transition: transform 0.15s ease;
+}
+.tap-scale:active {
+  transform: scale(0.97);
+}
+
+/* Image zoom on hover */
+.hover-zoom {
+  transition: transform 0.6s ease;
+}
+.hover-zoom:hover {
+  transform: scale(1.03);
+}
+
+/* Touch-friendly targets */
+@media (pointer: coarse) {
+  .hover-lift:hover {
+    transform: none;
+  }
+  .hover-underline:hover::after {
+    width: 0;
+  }
+}
+
+/* ─── SVG animations (CSS-only, GPU-accelerated) ───────────── */
+
+/* Line draw — stroke reveals from 0 to full */
+@keyframes svg-draw {
+  from {
+    stroke-dashoffset: var(--dash-length, 200);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.svg-draw {
+  stroke-dasharray: var(--dash-length, 200);
+  stroke-dashoffset: var(--dash-length, 200);
+  animation: svg-draw 1.5s ease forwards;
+}
+
+/* Slow continuous rotation */
+@keyframes svg-spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.svg-spin-slow {
+  animation: svg-spin-slow 20s linear infinite;
+}
+
+/* Dash flow — dashes move along the path */
+@keyframes svg-dash-flow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -40; }
+}
+.svg-dash-flow {
+  stroke-dasharray: 8 12;
+  animation: svg-dash-flow 2s linear infinite;
+}
+
+/* Gentle float up and down */
+@keyframes svg-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.svg-float {
+  animation: svg-float 4s ease-in-out infinite;
+}
+
+/* Pulse opacity */
+@keyframes svg-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+.svg-pulse {
+  animation: svg-pulse 3s ease-in-out infinite;
+}
+
+/* Scale in when section scrolls into view */
+@keyframes svg-scale-in {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.svg-scale-in {
+  animation: svg-scale-in 0.6s ease forwards;
 }
