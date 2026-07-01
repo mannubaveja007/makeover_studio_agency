@@ -22,8 +22,8 @@ export const HERO = {
   headline: "Portfolio websites built for UGC creators.",
   subheadline:
     "Stop losing brand deals to a messy link-in-bio. Get a portfolio that shows your work, tells your story, and makes brands say yes.",
-  ctaPrimary: { label: "Book a Free Call", href: "#contact" },
-  ctaSecondary: { label: "Follow on Instagram", href: INSTAGRAM_URL },
+  ctaPrimary: { label: "Book a Free Call →", href: INSTAGRAM_DM_URL },
+  ctaSecondary: { label: "See Our Work", href: "#work" },
 } as const;
 
 // ─── Problem / Positioning ──────────────────────────────────
