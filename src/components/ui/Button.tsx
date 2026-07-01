@@ -11,17 +11,17 @@ const base =
 
 const variants = {
   primary:
-    "bg-neutral-900 text-white hover:bg-neutral-800 rounded-lg",
+    "bg-neutral-900 text-white hover:bg-neutral-800 rounded-full shadow-lg shadow-neutral-900/20",
   secondary:
-    "bg-transparent text-neutral-900 border border-neutral-300 hover:border-neutral-900 rounded-lg",
+    "bg-transparent text-neutral-900 border border-neutral-300 hover:border-neutral-900 rounded-full",
   ghost:
     "bg-transparent text-neutral-500 hover:text-neutral-900 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-900",
 } as const;
 
 const sizes = {
-  sm: "px-4 py-2 text-sm",
-  md: "px-6 py-3 text-sm",
-  lg: "px-8 py-3.5 text-base",
+  sm: "px-5 py-2.5 text-sm",
+  md: "px-7 py-3 text-sm",
+  lg: "px-10 py-4 text-base font-semibold",
 } as const;
 
 export default function Button({
