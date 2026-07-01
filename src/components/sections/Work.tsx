@@ -13,7 +13,7 @@ export default function Work() {
           id="work-heading"
           className="text-2xl font-bold tracking-[-0.02em] text-neutral-900 sm:text-3xl md:text-4xl"
         >
-          Recent work.
+          Featured project.
         </h2>
       </AnimatedSection>
 
@@ -44,20 +44,24 @@ export default function Work() {
                   <p className="mt-1.5 max-w-md text-sm leading-relaxed text-neutral-500">
                     {project.description}
                   </p>
-                  <p className="mt-2 text-sm font-medium text-neutral-900">
-                    {project.result}
-                  </p>
+                  {project.result && (
+                    <p className="mt-2 text-sm font-medium text-neutral-900">
+                      {project.result}
+                    </p>
+                  )}
                 </div>
-                <Button
-                  href={project.url}
-                  variant="secondary"
-                  size="sm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="tap-scale mt-4 shrink-0 sm:mt-0"
-                >
-                  View project →
-                </Button>
+                {project.url && project.url !== "#" && (
+                  <Button
+                    href={project.url}
+                    variant="secondary"
+                    size="sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="tap-scale mt-4 shrink-0 sm:mt-0"
+                  >
+                    View project →
+                  </Button>
+                )}
               </div>
             </div>
           </AnimatedSection>

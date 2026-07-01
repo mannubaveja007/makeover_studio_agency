@@ -91,11 +91,11 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     title: "Creator Portfolio — Lifestyle & Beauty",
-    creator: "Sarah Chen",
+    creator: "",
     niche: "Lifestyle & Beauty UGC",
     description:
-      "A conversion-focused portfolio showcasing 20+ brand collaborations with integrated media kit download.",
-    result: "3× more brand inquiries within the first month.",
+      "A mobile-first portfolio site with integrated contact form and content showcase. Designed to help the creator land brand deals faster.",
+    result: "",
     image: "/images/project-placeholder.jpg",
     url: "#",
     featured: true,
