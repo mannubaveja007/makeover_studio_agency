@@ -36,6 +36,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# gemini config (contains API keys)
+.gemini/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+testsprite_tests/tmp/config.json

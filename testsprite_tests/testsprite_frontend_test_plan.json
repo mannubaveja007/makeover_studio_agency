@@ -1,0 +1,803 @@
+[
+  {
+    "id": "TC001",
+    "title": "Reach contact from the hero call to action",
+    "description": "Visiting the homepage and using the hero contact call to action should take the visitor to the Instagram contact flow.",
+    "category": "Pricing Packages",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the hero call to action for booking a free call"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Instagram contact destination is opened"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Navigate to each key section from the top navigation",
+    "description": "This verifies that a visitor can use the fixed navigation to jump between the homepage sections and reach the main content areas.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the value proposition section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the value proposition section is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the process section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the process section is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the work section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the work section is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the pricing packages section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the pricing packages section is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the contact section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact section is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Open Instagram DM from the contact section",
+    "description": "This verifies that a visitor can reach the contact section and use the primary Instagram DM call to action to open Instagram in a new tab.",
+    "category": "Contact Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the contact section"
+      },
+      {
+        "type": "action",
+        "description": "Click the Instagram DM contact button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify Instagram opens in a new tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact action remains available on the page"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Start contact from the hero call to action",
+    "description": "This verifies that a visitor can use the hero call to action to open the Instagram DM contact path in a new tab.",
+    "category": "Hero Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the call to action to book a free call"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a new browser tab or window is opened for Instagram"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Use the fixed navigation to reach key sections",
+    "description": "Visiting the homepage and using the fixed navigation should let a visitor jump between the main informational sections without losing the page context.",
+    "category": "Pricing Packages",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the process section"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the work section"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the pricing section"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the contact section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact section is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Open Instagram from the top navigation",
+    "description": "This verifies that a visitor can reach the agency's Instagram profile from the navigation and that the external link opens separately.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the Instagram link in the top navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a new browser tab or window is opened for Instagram"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Send a desktop contact message",
+    "description": "This verifies that a desktop visitor can complete the contact form and see a confirmation message after submitting.",
+    "category": "Contact Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the contact section"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with a valid name"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the Instagram handle or email field with a valid contact value"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the message field with a brief inquiry"
+      },
+      {
+        "type": "action",
+        "description": "Submit the contact form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a confirmation message is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact form is no longer in its initial state"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Use the mobile menu to jump to a section and close the drawer",
+    "description": "This verifies that a mobile visitor can open the hamburger menu, navigate to a section, and have the menu close after selection.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Resize the browser to a mobile viewport"
+      },
+      {
+        "type": "action",
+        "description": "Open the mobile navigation menu"
+      },
+      {
+        "type": "action",
+        "description": "Select the work section link in the mobile menu"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the work section is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the mobile navigation menu is closed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Jump from a package to contact",
+    "description": "Visiting the homepage and using a package call to action should scroll the page to the contact section so the visitor can continue to inquiry.",
+    "category": "Pricing Packages",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the pricing section"
+      },
+      {
+        "type": "action",
+        "description": "Click a package call to action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact section is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Open the Instagram link from the footer",
+    "description": "This verifies that a visitor can use the footer Instagram link to open the agency profile in a new tab.",
+    "category": "Footer",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the footer"
+      },
+      {
+        "type": "action",
+        "description": "Click the Instagram footer link"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify Instagram opens in a new tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the footer remains visible on the page"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "Open the email link from the footer",
+    "description": "This verifies that a visitor can use the footer email link to open the email client from the homepage.",
+    "category": "Footer",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the footer"
+      },
+      {
+        "type": "action",
+        "description": "Click the email footer link"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the email client opens"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the footer contact options are still available"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Review the pricing packages and choose a contact path",
+    "description": "This verifies that a visitor can compare the pricing packages and use a package call to action to reach the contact section.",
+    "category": "Pricing Packages",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the pricing packages section"
+      },
+      {
+        "type": "action",
+        "description": "Click the call to action for a pricing package"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact section is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Review the pricing tiers",
+    "description": "Visiting the homepage and scrolling to the pricing section should display the Starter, Pro, and Custom packages for comparison.",
+    "category": "Pricing Packages",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the pricing section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the three pricing packages are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Reach the contact section from pricing packages",
+    "description": "This verifies that a visitor can use a pricing package call to action to jump to the contact section and continue the inquiry flow.",
+    "category": "Contact Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the pricing packages section"
+      },
+      {
+        "type": "action",
+        "description": "Click a package call to action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact section is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a contact path is available"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Jump from the hero to the work showcase",
+    "description": "This verifies that a visitor can use the hero call to action to jump directly to the work showcase section.",
+    "category": "Hero Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the call to action to see the work showcase"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the work section is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC016",
+    "title": "Send a desktop contact message and see confirmation",
+    "description": "This verifies that a desktop visitor can complete the contact form and see the success state after submission.",
+    "category": "Contact",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the contact section"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with a valid name"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with a valid email address"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the message field with a brief inquiry"
+      },
+      {
+        "type": "action",
+        "description": "Submit the contact form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC017",
+    "title": "Stay focused on Instagram DM as the mobile contact option",
+    "description": "This verifies that a mobile visitor can reach the contact section and use the Instagram DM action when the desktop form is hidden.",
+    "category": "Contact Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Set the viewport to a mobile size"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the contact section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact form is not displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Instagram DM contact button is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC018",
+    "title": "View the process timeline",
+    "description": "Visiting the homepage and scrolling to the process section should reveal the full four-step timeline for how the agency works.",
+    "category": "Process Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the process section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the four-step process timeline is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC019",
+    "title": "Review the value proposition cards on the homepage",
+    "description": "This verifies that a visitor can scroll to the value proposition section and see the three supporting benefit cards.",
+    "category": "Problem / Value Proposition Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the value proposition section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the value proposition cards are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC020",
+    "title": "View the featured project showcase",
+    "description": "Visiting the homepage and scrolling to the work section should reveal the featured project image and supporting project copy.",
+    "category": "Work Showcase",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the work section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the featured project showcase is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC021",
+    "title": "Use the hero work showcase call to action",
+    "description": "This verifies that a visitor can open the work showcase from the hero area and see the featured project content.",
+    "category": "Footer",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the hero work showcase call to action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the work section is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify featured project content is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC022",
+    "title": "Keep the featured project visible in the work showcase",
+    "description": "This verifies that a visitor can inspect the featured project area in the work showcase and see the project presentation content.",
+    "category": "Work Showcase",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the call to action to see the work showcase"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the featured project content is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC023",
+    "title": "Review the agency value proposition from the homepage sections",
+    "description": "This verifies that a visitor can understand the agency offer by browsing the core homepage sections in sequence.",
+    "category": "Footer",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the problem and value proposition section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the process section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the work section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the pricing packages section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the core informational sections are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the homepage presents a clear path to contact"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC024",
+    "title": "Use Instagram contact from the contact section on mobile",
+    "description": "This verifies that a mobile visitor can still reach the agency through Instagram when the contact form is hidden.",
+    "category": "Contact",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Resize the browser to a mobile viewport"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the contact section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact form is not displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the Instagram contact link"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a new browser tab or window is opened for Instagram"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC025",
+    "title": "See the hover lift on a value proposition card",
+    "description": "This verifies that a visitor gets the expected hover interaction on the value proposition cards while browsing on desktop.",
+    "category": "Problem / Value Proposition Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the value proposition section"
+      },
+      {
+        "type": "action",
+        "description": "Hover over a value proposition card"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the hovered card shows a lifted interactive state"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC026",
+    "title": "See process steps animate into view",
+    "description": "Visiting the homepage and scrolling to the process section should reveal the process steps with their staggered entrance behavior.",
+    "category": "Process Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the process section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the process steps are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the process section appears after scrolling"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC027",
+    "title": "Keep the contact form from submitting with empty fields",
+    "description": "This verifies that the contact form blocks an empty submission and shows validation feedback instead of a success state.",
+    "category": "Contact",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the contact section"
+      },
+      {
+        "type": "action",
+        "description": "Submit the contact form without entering details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a form validation error is visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC028",
+    "title": "See the project image zoom interaction",
+    "description": "Visiting the homepage and hovering the featured project image should preserve the showcase while applying the expected visual zoom effect.",
+    "category": "Work Showcase",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the work section"
+      },
+      {
+        "type": "action",
+        "description": "Hover over the featured project image"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the featured project showcase remains visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC029",
+    "title": "Hover a process step",
+    "description": "Visiting the homepage and hovering a process step should apply the expected lift interaction without disrupting the timeline content.",
+    "category": "Process Section",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the process section"
+      },
+      {
+        "type": "action",
+        "description": "Hover over a process step"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the process timeline remains visible"
+      }
+    ],
+    "priority": "Low"
+  }
+]
