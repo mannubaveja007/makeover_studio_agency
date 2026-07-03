@@ -1,9 +1,19 @@
-import { PACKAGES } from "@/lib/constants";
+import { PACKAGES_INR, PACKAGES_USD } from "@/lib/constants";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
 
-export default function Packages() {
+interface PackagesProps {
+  region?: "in" | "us";
+}
+
+export default function Packages({ region = "in" }: PackagesProps) {
+  const packages = region === "us" ? PACKAGES_USD : PACKAGES_INR;
+  const gridCols =
+    packages.length === 2
+      ? "lg:grid-cols-2 lg:max-w-3xl lg:mx-auto"
+      : "lg:grid-cols-3";
+
   return (
     <SectionWrapper id="packages" variant="default">
       <AnimatedSection>
@@ -18,8 +28,10 @@ export default function Packages() {
         </p>
       </AnimatedSection>
 
-      <div className="mt-10 space-y-4 sm:mt-14 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-px lg:overflow-hidden lg:rounded-2xl lg:border lg:border-neutral-200 lg:bg-neutral-200">
-        {PACKAGES.map((pkg, i) => (
+      <div
+        className={`mt-10 space-y-4 sm:mt-14 lg:space-y-0 lg:grid ${gridCols} lg:gap-px lg:overflow-hidden lg:rounded-2xl lg:border lg:border-neutral-200 lg:bg-neutral-200`}
+      >
+        {packages.map((pkg, i) => (
           <AnimatedSection key={pkg.name} delay={i * 0.1}>
             <div
               className={`flex h-full flex-col rounded-2xl p-6 sm:p-8 lg:rounded-none ${
@@ -41,6 +53,17 @@ export default function Packages() {
                     pkg.highlighted ? "text-white" : "text-neutral-900"
                   }`}
                 >
+                  {pkg.originalPrice && (
+                    <span
+                      className={`mr-2 text-lg line-through ${
+                        pkg.highlighted
+                          ? "text-neutral-500"
+                          : "text-neutral-400"
+                      }`}
+                    >
+                      {pkg.originalPrice}
+                    </span>
+                  )}
                   {pkg.price}
                 </p>
                 <p

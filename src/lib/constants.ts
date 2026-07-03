@@ -106,13 +106,49 @@ export const PROJECTS: Project[] = [
 export interface Package {
   name: string;
   price: string;
+  originalPrice?: string;
   description: string;
   features: string[];
   cta: string;
   highlighted: boolean;
 }
 
-export const PACKAGES: Package[] = [
+export const PACKAGES_INR: Package[] = [
+  {
+    name: "Portfolio",
+    price: "₹1,000",
+    originalPrice: "₹2,000",
+    description:
+      "A stunning single-page portfolio to showcase your work and land brand deals.",
+    features: [
+      "Single-page portfolio site",
+      "Mobile-optimized design",
+      "Contact form or link-in-bio",
+      "1 round of revisions",
+      "Live in 5 business days",
+    ],
+    cta: "Get Started",
+    highlighted: true,
+  },
+  {
+    name: "Custom Website",
+    price: "₹15,000 – ₹30,000",
+    description:
+      "A fully custom, multi-page website tailored to your brand and goals.",
+    features: [
+      "Multi-page custom website",
+      "Custom design & branding",
+      "Media kit / booking / e-commerce",
+      "Analytics integration",
+      "3 rounds of revisions",
+      "Ongoing maintenance available",
+    ],
+    cta: "Book a Call",
+    highlighted: false,
+  },
+];
+
+export const PACKAGES_USD: Package[] = [
   {
     name: "Starter",
     price: "$497",
